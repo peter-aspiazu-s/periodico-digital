@@ -1,0 +1,23 @@
+.footer{
+    height: 17.3rem;
+    background-color: #bedce6;
+    padding: 1rem 1.5rem 1.1rem 1.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.footer h2{
+    text-align: center;
+    font-size: 2.5rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+}
+
+.footer span{
+    text-align: center;
+    font-size: 0.8rem;
+    color: #333;
+    display: block;
+}
