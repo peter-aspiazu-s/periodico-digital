@@ -1,8 +1,10 @@
 <!DOCTYPE html>
-<html lang="en">
+<!-- Ayuda a los lectores de pantalla a pronunciar el contenido correctamente. -->
+<html lang="es">
 
 <head>
     <meta charset="UTF-8">
+    <meta name="language" content="Spanish">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>El Periodico HTML/CSS</title>
     <link rel="stylesheet" href="styles.css">
@@ -16,30 +18,30 @@
         <header class="header">
             <!-- Aquí irá la P podría ser una D de developers y 
          va el texto que esta a lado de la P-->
-            <div class="header__sector1">
+            <div class="header__logo">
                 <!-- <span class="letter-d">D</span> -->
                  <div class="letra-d"></div>
                  <p>EV</p>
             </div>
             <!-- aqui irá lo de arriba -->
-            <div class="header__sector2">
+            <div class="header__director-info">
                 <p>
                     <span>Director:</span>
                     PETER ASPIAZU
                 </p>
-                <div class="header__sector2--div">
+                <div class="header__director-info--div">
                     <p>Precio: $2</p>
                     <p>Diario + Lecturas $3 Psicología: $9.99 Novela: $5.95 Vespa: $10.95 Cuello: $7.95</p>
                 </div>
             </div>
             <!-- luego lo del texto grande con lo que sobra del lado derecho -->
-            <div class="header__sector3">
+            <div class="header__branding">
                 <p>elDevRiódico</p>
-                <div class="header__sector3--div">
-                    <p>
+                <div class="header__branding--div">
+                    <time datetime="2025-01-08">
                         <span>SÁBADO</span>
                         8 de enero de 2025
-                    </p>
+                    </time>
                     <p>
                         Edición digital:
                         <span>ELDEVRIODICO.COM</span>
@@ -51,69 +53,80 @@
         <div class="container__contain">
             <div class="container__main--article--footer">
                 <main class="main">
-                    <p class="main__p1">LA DEMANA DE DESARROLLADORES JAVASCRIPT PARA 2025</p>
-                    <h1>La IA como apoyo para desarrolladores de JavaScript</h1>
-                    <p class="main__p2">Desarrolladores JavaScript celebran el apoyo de IA como ChatGPT, que les permite obtener código eficiente con instrucciones claras. Esto ha mejorado notablemente su productividad.</p>
-                    <div class="main__separator">
-                        <hr>
+                    <p class="main__lead-subtitle">ALTA DEMANA DE DESARROLLADORES JAVASCRIPT PARA 2025</p>
+                    <h1>La IA, una aliada clave en el desarrollo web</h1>
+                    <p class="main__summary">Desarrolladores JavaScript destacan el valor de herramientas de IA como ChatGPT, que permiten generar código eficiente a partir de instrucciones claras. El resultado: mayor agilidad y productividad en sus proyectos.</p>
+                    <div class="meta-separator">
+                        <hr aria-hidden="true">
                         <span>TEMA DEL DÍA | P.2 A4</span>
-                        <hr>
+                        <hr aria-hidden="true">
                     </div>
-                    <span class="main__span1">Alexander Cajamarca</span>
-                    <img src="./img/javascript.jpg" alt="banner de javascript">
-                    <span class="main__span2">El lenguaje de programación que reina la web aún en 2025.</span>
+                    <span class="main__author">Alexander Cajamarca</span>
+                    <figure>
+                        <img 
+                            src="./img/javascript.jpg" 
+                            alt="Ilustración del lenguaje JavaScript"
+                            aria-describedby="js-caption"
+                        >
+                        <!-- colocar el aria describedby le indica
+                         al lector de pantalla que la imagen se describe en mi
+                         elemento con id js-caption -->
+                        <figcaption id="js-caption" class="main__figcaption">El lenguaje de programación que reina la web aún en 2025.</figcaption>
+                    </figure>
                 </main>
         
                 <article class="article">
-                    <h2>Los internautas afirman que JavaScript aún reina</h2>
-                    <p>En encuestas realizadas a finales de 2024 JavaScript ocupa el primer puesto en la web.</p>
-                    <div class="main__separator">
-                        <hr>
+                    <h2>Usuarios y expertos afirman que JavaScript sigue dominando la web</h2>
+                    <p>Según encuestas realizadas a finales de 2024, JavaScript continúa liderando como el lenguaje más utilizado en entornos web.</p>
+                    <div class="meta-separator">
+                        <hr aria-hidden="true">
                         <span>PANORAMA | P.6 Y 7</span>
-                        <hr>
+                        <hr aria-hidden="true">
                     </div>
                 </article>
 
                 <footer class="footer">
-                    <h2>Phyton evoluciona para intentar conquistar la web en 2025</h2>
+                    <h2>Python evoluciona con fuerza para conquistar la web en 2025</h2>
                     <span>PERSONAS | P.30 Y 31</span>
                 </footer>
             </div>
             <div class="container__section">
-                <section class="section">
-                    <article class="section__article">
-                        <img src="/img/css.png" alt="imagen de css">
-                        <span class="section__article--span1">CSS ESTA RENOVADO</span>
+                <section class="section" aria-labelledby="section-title"
+                >
+                    <h2 id="section-title" class="sr-only">Sección de artículos destacados</h2>
+                    <article class="section__article" aria-label="Artículo sobre novedades en CSS">
+                        <img src="/img/css.png" alt="Portada del artículo sobre las novedades de CSS">
+                        <span class="section__article--category">CSS ESTA RENOVADO</span>
                         <h3>CSS viene con nuevas propiedades muy interesantes</h3>
-                        <span class="section__article--span2">PANORAMA | P.15</span>
-                        <hr class="section__article--hr1">
+                        <span class="section__article--page-ref">PANORAMA | P.15</span>
+                        <hr class="section__article--divider" aria-hidden="true">
                     </article>
 
-                    <article class="section__article">
-                        <span class="section__article--span1">APRENDIZAJE</span>
+                    <article class="section__article" aria-label="Artículo sobre bootcamp de CSS para personas que buscan la excelencia">
+                        <span class="section__article--category">APRENDIZAJE</span>
                         <h3>Bootcamp de CSS para personas que buscan la excelencia</h3>
-                        <span class="section__article--span2">PERSONAS | P.32</span>
+                        <span class="section__article--page-ref">PERSONAS | P.32</span>
                     </article>
 
-                    <article class="section__article">
-                        <span class="section__article--span3">Editorial</span>
+                    <article class="section__article" aria-label="Editorial de Peter Aspiazu sobre codificación y el futuro de CSS">
+                        <span class="section__article--label">Editorial</span>
                         <p>El arte de hacer y codificar</p>
-                        <hr>
-                        <span class="section__article--span3">Artículo</span>
+                        <hr class="section__article--highlight-line" aria-hidden="true">
+                        <span class="section__article--label">Artículo</span>
                         <p>Desarrollando el futuro con CSS</p>
-                        <span class="section__article--span4">Peter Aspiazu</span>
-                        <span class="section__article--span2">PERSONAS | P.32</span>
+                        <span class="section__article--author">Peter Aspiazu</span>
+                        <span class="section__article--page-ref">PERSONAS | P.32</span>
                     </article>
 
-                    <article class="section__article">
+                    <article class="section__article" aria-label="Anuncio sobre revista y diario a precio conjunto">
                         <img src="/img/cimg.jpg" alt="imagen de c#">
                         <span>Lecturas</span>
-                        <p>La revista y diario, por un precio conjunto de 3 dólares</p>
+                        <p>Consigue la revista y el diario por un precio especial de $3</p>
                     </article>
-                    <footer class="footer">
+                    <div class="section_footer" role="complementary" aria-label="Pie de página">
                         <h2>Phyton evoluciona para intentar conquistar la web en 2025</h2>
                         <span>PERSONAS | P.30 Y 31</span>
-                    </footer>
+                    </div>
                 </section>
             </div>
         </div>

@@ -2,48 +2,31 @@
     padding-top: 2rem;
 }
 
-.main__p1{
+.main__lead-subtitle{
     font-size: 1.5rem;
     text-align: center;
     margin-bottom: 1rem;
 }
 
 .main h1{
-    font-size: 5rem;
     text-align: center;
     font-weight: 600;
     margin-bottom: 1rem;
-    line-height: 4.5rem;
+    font-size: 2.5rem;
+    line-height: 2.5rem;
 }
 
-.main__p2{
+.main__summary{
     font-size: 1.3rem;
     text-align: center;
     margin-bottom: 1.2rem;
-}
-.main__separator{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 10px;
-}
-
-.main__separator hr{
-    width: 40%;
-}
-
-.main__separator span{
-    width: 20%;
-    text-align: center;
-    font-size: 0.8rem;
-    color: #333;
 }
 
 .main img{
     width: 100%;
 }
 
-.main__span1{
+.main__author{
     display: block;
     text-align: right;
     font-size: 0.7rem;
@@ -51,9 +34,20 @@
     color: #333;
 }
 
-.main__span2{
+.main__figcaption{
     display: block;
     text-align: center;
     font-size: 0.7rem;
     font-weight: 600;
+}
+
+@media screen and (min-width: 1024px){
+    .main h1{
+        font-size: 5rem;
+        line-height: 4.5rem;
+    }
+
+    .main img{
+        height: 430px;
+    }
 }
